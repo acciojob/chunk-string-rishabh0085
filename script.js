@@ -1,12 +1,19 @@
 function stringChop(str, size) {
-  // your code here
-	let x = 0
-	let arr = []
-	arr.pop(str.slice(x,x+size))
-	x = x +size
-	if(x>str.length){
-		break
-	}
+  //SGN your code here
+	let arr = [];
+	if (!str) return arr;
+	if(str.length >=1){
+		if(size>str.length){
+			arr.push(str);
+		}else {
+			let i;
+			for (i = 0; i < str.length; i = i+size) {
+				arr.push(str.substring(i, i+size));
+				
+			} 
+		}
+		
+	}return arr;
 }
 
 // Do not change the code below
